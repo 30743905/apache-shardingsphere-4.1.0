@@ -1,0 +1,11 @@
+org.apache.shardingsphere.shadow.rewrite.aware
+org.apache.shardingsphere.shadow.rewrite.condition
+org.apache.shardingsphere.shadow.rewrite.context
+org.apache.shardingsphere.shadow.rewrite.judgement
+org.apache.shardingsphere.shadow.rewrite.judgement.impl
+org.apache.shardingsphere.shadow.rewrite.parameter
+org.apache.shardingsphere.shadow.rewrite.parameter.impl
+org.apache.shardingsphere.shadow.rewrite.token
+org.apache.shardingsphere.shadow.rewrite.token.generator
+org.apache.shardingsphere.shadow.rewrite.token.generator.impl
+org.apache.shardingsphere.shadow.rewrite.token.pojo

@@ -1,0 +1,4 @@
+org.apache.shardingsphere.shardingscaling.postgresql
+org.apache.shardingsphere.shardingscaling.postgresql.wal
+org.apache.shardingsphere.shardingscaling.postgresql.wal.decode
+org.apache.shardingsphere.shardingscaling.postgresql.wal.event

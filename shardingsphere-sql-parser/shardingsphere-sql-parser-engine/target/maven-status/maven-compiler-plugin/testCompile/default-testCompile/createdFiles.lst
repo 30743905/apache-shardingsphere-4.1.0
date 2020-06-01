@@ -1,0 +1,7 @@
+org\apache\shardingsphere\sql\parser\core\visitor\VisitorRuleTest.class
+org\apache\shardingsphere\sql\parser\core\visitor\SelectContext.class
+org\apache\shardingsphere\sql\parser\SQLParseEngineFactoryTest.class
+org\apache\shardingsphere\sql\parser\exception\SQLParsingExceptionTest.class
+org\apache\shardingsphere\sql\parser\cache\SQLParseResultCacheTest.class
+org\apache\shardingsphere\sql\parser\hook\SPIParsingHookTest.class
+org\apache\shardingsphere\sql\parser\hook\fixture\ParsingHookFixture.class

@@ -1,0 +1,4 @@
+org\apache\shardingsphere\underlying\route\context\RouteResultTest.class
+org\apache\shardingsphere\underlying\route\hook\fixture\RoutingHookFixture.class
+org\apache\shardingsphere\underlying\route\context\RouteUnitTest.class
+org\apache\shardingsphere\underlying\route\hook\SPIRoutingHookTest.class

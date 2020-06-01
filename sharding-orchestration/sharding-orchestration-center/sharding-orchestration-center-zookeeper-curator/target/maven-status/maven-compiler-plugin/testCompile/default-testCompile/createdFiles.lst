@@ -1,0 +1,3 @@
+org\apache\shardingsphere\orchestration\center\instance\CuratorZookeeperCenterRepositoryTest.class
+org\apache\shardingsphere\orchestration\center\util\EmbedTestingServer.class
+org\apache\shardingsphere\orchestration\center\instance\ZookeeperPropertiesTest.class

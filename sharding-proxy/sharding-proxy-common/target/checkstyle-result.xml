@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.19">
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\config\ShardingConfiguration.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\config\ShardingConfigurationLoader.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\config\yaml\constructor\YamlProxyRuleConfigurationConstructor.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\config\yaml\YamlDataSourceParameter.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\config\yaml\YamlProxyRuleConfiguration.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\config\yaml\YamlProxyServerConfiguration.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\context\ShardingProxyContext.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\main\java\org\apache\shardingsphere\shardingproxy\util\DataSourceConverter.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\test\java\org\apache\shardingsphere\shardingproxy\config\ShardingConfigurationLoaderTest.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\test\java\org\apache\shardingsphere\shardingproxy\context\ShardingProxyContextTest.java">
+</file>
+<file name="D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-proxy\sharding-proxy-common\src\test\java\org\apache\shardingsphere\shardingproxy\util\DataSourceConverterTest.java">
+</file>
+</checkstyle>

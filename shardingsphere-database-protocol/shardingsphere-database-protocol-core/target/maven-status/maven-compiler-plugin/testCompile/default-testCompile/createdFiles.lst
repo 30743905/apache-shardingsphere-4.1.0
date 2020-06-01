@@ -1,0 +1,2 @@
+org\apache\shardingsphere\database\protocol\error\CommonErrorCodeTest.class
+org\apache\shardingsphere\database\protocol\codec\PacketCodecTest.class

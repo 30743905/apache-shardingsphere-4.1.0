@@ -1,0 +1,5 @@
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-rewrite\src\test\java\org\apache\shardingsphere\sharding\rewrite\fixture\ShardingKeyGeneratorFixture.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-rewrite\src\test\java\org\apache\shardingsphere\sharding\rewrite\fixture\NormalEncryptorFixture.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-rewrite\src\test\java\org\apache\shardingsphere\sharding\rewrite\parameterized\MixSQLRewriterParameterizedTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-rewrite\src\test\java\org\apache\shardingsphere\sharding\rewrite\parameterized\ShardingSQLRewriterParameterizedTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-rewrite\src\test\java\org\apache\shardingsphere\sharding\rewrite\fixture\QueryAssistedEncryptorFixture.java

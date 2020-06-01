@@ -1,0 +1,17 @@
+#Mon Jun 01 14:26:46 CST 2020
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\TypeBasedSPIServiceLoader.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\test\\java\\org\\apache\\shardingsphere\\spi\\fixture\\TypeBasedSPIFixtureImpl.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\test\\java\\org\\apache\\shardingsphere\\spi\\fixture\\TypeBasedSPIFixture.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\database\\metadata\\DataSourceMetaData.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\database\\type\\DatabaseTypeAwareSPI.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\NewInstanceServiceLoader.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\test\\java\\org\\apache\\shardingsphere\\spi\\TypeBasedSPIServiceLoaderTest.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\TypeBasedSPI.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\order\\OrderAware.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\test\\java\\org\\apache\\shardingsphere\\spi\\NewInstanceServiceLoaderTest.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\test\\java\\org\\apache\\shardingsphere\\spi\\fixture\\TypeBasedSPIFixtureServiceLoader.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\order\\OrderedRegistry.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\database\\type\\BranchDatabaseType.java=1587694636000
+configuration*?=CB029C136D8E9517EBA0A50DD97D60192341C6EA
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\database\\type\\DatabaseType.java=1587694636000
+D\:\\Material\\source\\sharding-sphere\\apache-shardingsphere-4.1.0-src-release\\shardingsphere-spi\\src\\main\\java\\org\\apache\\shardingsphere\\spi\\database\\metadata\\MemorizedDataSourceMetaData.java=1587694636000

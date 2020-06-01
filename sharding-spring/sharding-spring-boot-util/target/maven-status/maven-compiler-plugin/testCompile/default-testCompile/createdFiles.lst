@@ -1,0 +1,5 @@
+org\apache\shardingsphere\spring\boot\converter\StringToNoneShardingStrategyConfigurationConverterTest.class
+org\apache\shardingsphere\spring\boot\datasource\DataSourcePropertiesSetterHolderTest.class
+org\apache\shardingsphere\spring\boot\datasource\Dbcp2DataSourcePropertiesSetterTest.class
+org\apache\shardingsphere\spring\boot\datasource\HikariDataSourcePropertiesSetterTest.class
+org\apache\shardingsphere\spring\boot\util\DataSourceUtilTest.class

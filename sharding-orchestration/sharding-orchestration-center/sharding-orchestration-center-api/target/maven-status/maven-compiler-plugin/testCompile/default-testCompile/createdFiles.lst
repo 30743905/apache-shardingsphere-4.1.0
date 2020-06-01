@@ -1,0 +1,3 @@
+org\apache\shardingsphere\orchestration\center\util\ConfigKeyUtilsTest.class
+org\apache\shardingsphere\orchestration\center\config\CenterConfigurationTest.class
+org\apache\shardingsphere\orchestration\center\config\OrchestrationConfigurationTest.class

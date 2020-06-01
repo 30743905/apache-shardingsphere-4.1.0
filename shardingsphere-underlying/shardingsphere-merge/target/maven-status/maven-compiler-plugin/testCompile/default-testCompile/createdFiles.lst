@@ -1,0 +1,9 @@
+org\apache\shardingsphere\underlying\merge\result\impl\memory\MemoryQueryResultRowTest.class
+org\apache\shardingsphere\underlying\merge\result\impl\decorator\DecoratorMergedResultTest.class
+org\apache\shardingsphere\underlying\merge\result\impl\memory\MemoryMergedResultTest.class
+org\apache\shardingsphere\underlying\merge\result\impl\stream\fixture\TestStreamMergedResult.class
+org\apache\shardingsphere\underlying\merge\result\impl\stream\StreamMergedResultTest.class
+org\apache\shardingsphere\underlying\merge\result\impl\transparent\TransparentMergedResultTest.class
+org\apache\shardingsphere\underlying\merge\result\impl\decorator\fixture\TestDecoratorMergedResult.class
+org\apache\shardingsphere\underlying\merge\result\impl\memory\fixture\TestMemoryMergedResult.class
+org\apache\shardingsphere\underlying\merge\result\impl\fixture\TestRule.class

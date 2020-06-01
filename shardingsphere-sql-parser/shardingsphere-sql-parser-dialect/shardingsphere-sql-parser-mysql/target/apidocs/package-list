@@ -1,0 +1,6 @@
+org.apache.shardingsphere.sql.parser.autogen
+org.apache.shardingsphere.sql.parser.mysql
+org.apache.shardingsphere.sql.parser.mysql.lexer
+org.apache.shardingsphere.sql.parser.mysql.parser
+org.apache.shardingsphere.sql.parser.mysql.visitor
+org.apache.shardingsphere.sql.parser.mysql.visitor.impl

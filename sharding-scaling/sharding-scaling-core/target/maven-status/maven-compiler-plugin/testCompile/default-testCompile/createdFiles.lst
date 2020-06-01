@@ -1,0 +1,14 @@
+org\apache\shardingsphere\shardingscaling\core\execute\executor\writer\AbstractSqlBuilderTest$1.class
+org\apache\shardingsphere\shardingscaling\core\execute\executor\writer\AbstractSqlBuilderTest.class
+org\apache\shardingsphere\shardingscaling\core\config\RdbmsConfigurationTest.class
+org\apache\shardingsphere\shardingscaling\core\util\ReflectionUtil.class
+org\apache\shardingsphere\shardingscaling\core\fixture\FixtureH2JDBCReader.class
+org\apache\shardingsphere\shardingscaling\core\synctask\history\HistoryDataSyncTaskGroupTest.class
+org\apache\shardingsphere\shardingscaling\core\metadata\MetaDataManagerTest.class
+org\apache\shardingsphere\shardingscaling\core\execute\engine\DefaultSyncTaskExecuteEngineTest.class
+org\apache\shardingsphere\shardingscaling\core\synctask\history\HistoryDataSyncTaskTest.class
+org\apache\shardingsphere\shardingscaling\core\execute\executor\writer\AbstractJDBCWriterTest$1.class
+org\apache\shardingsphere\shardingscaling\core\fixture\FixtureH2ScalingEntry.class
+org\apache\shardingsphere\shardingscaling\core\fixture\FixtureNopWriter.class
+org\apache\shardingsphere\shardingscaling\core\execute\executor\writer\AbstractJDBCWriterTest.class
+org\apache\shardingsphere\shardingscaling\core\datasource\DataSourceManagerTest.class

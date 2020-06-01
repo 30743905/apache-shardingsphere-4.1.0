@@ -1,0 +1,3 @@
+org\apache\shardingsphere\shardingproxy\frontend\postgresql\command\query\binary\bind\PostgreSQLComBindExecutorTest.class
+org\apache\shardingsphere\shardingproxy\frontend\postgresql\command\query\text\PostgreSQLComQueryExecutorTest.class
+org\apache\shardingsphere\shardingproxy\frontend\postgresql\command\PostgreSQLCommandExecuteEngineTest.class

@@ -1,0 +1,5 @@
+org\apache\shardingsphere\sharding\rewrite\fixture\NormalEncryptorFixture.class
+org\apache\shardingsphere\sharding\rewrite\fixture\ShardingKeyGeneratorFixture.class
+org\apache\shardingsphere\sharding\rewrite\parameterized\MixSQLRewriterParameterizedTest.class
+org\apache\shardingsphere\sharding\rewrite\fixture\QueryAssistedEncryptorFixture.class
+org\apache\shardingsphere\sharding\rewrite\parameterized\ShardingSQLRewriterParameterizedTest.class

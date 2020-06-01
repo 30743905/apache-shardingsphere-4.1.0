@@ -1,0 +1,4 @@
+org\apache\shardingsphere\shardingproxy\frontend\executor\ExecutorGroupTest.class
+org\apache\shardingsphere\shardingproxy\frontend\executor\ChannelThreadExecutorGroupTest.class
+org\apache\shardingsphere\shardingproxy\frontend\DatabaseFrontendEngineFactoryTest.class
+org\apache\shardingsphere\shardingproxy\frontend\ConnectionIdGeneratorTest.class

@@ -1,0 +1,8 @@
+org\apache\shardingsphere\api\config\sharding\KeyGeneratorConfigurationTest.class
+org\apache\shardingsphere\api\config\masterslave\MasterSlaveRuleConfigurationTest.class
+org\apache\shardingsphere\api\config\sharding\TableRuleConfigurationTest.class
+org\apache\shardingsphere\api\config\sharding\strategy\InlineShardingStrategyConfigurationTest.class
+org\apache\shardingsphere\api\hint\HintManagerTest.class
+org\apache\shardingsphere\api\config\sharding\strategy\HintShardingStrategyConfigurationTest.class
+org\apache\shardingsphere\api\config\sharding\strategy\ComplexShardingStrategyConfigurationTest.class
+org\apache\shardingsphere\api\config\sharding\strategy\StandardShardingStrategyConfigurationTest.class

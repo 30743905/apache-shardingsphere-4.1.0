@@ -1,0 +1,4 @@
+org\apache\shardingsphere\shardingscaling\web\HttpServerHandlerTest.class
+org\apache\shardingsphere\shardingscaling\fixture\FixtureNopLogManager.class
+org\apache\shardingsphere\shardingscaling\fixture\FixtureH2DataSourceChecker.class
+org\apache\shardingsphere\shardingscaling\fixture\FixtureH2ScalingEntry.class

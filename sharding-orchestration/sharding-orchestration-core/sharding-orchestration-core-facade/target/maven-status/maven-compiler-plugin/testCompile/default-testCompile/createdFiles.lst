@@ -1,0 +1,6 @@
+org\apache\shardingsphere\orchestration\core\facade\properties\OrchestrationPropertiesTest.class
+org\apache\shardingsphere\orchestration\core\facade\ShardingOrchestrationListenerManagerTest.class
+org\apache\shardingsphere\orchestration\core\facade\util\FieldUtil.class
+org\apache\shardingsphere\orchestration\core\facade\fixture\FirstTestConfigCenterRepository.class
+org\apache\shardingsphere\orchestration\core\facade\fixture\SecondTestRegistryCenterRepository.class
+org\apache\shardingsphere\orchestration\core\facade\ShardingOrchestrationFacadeTest.class

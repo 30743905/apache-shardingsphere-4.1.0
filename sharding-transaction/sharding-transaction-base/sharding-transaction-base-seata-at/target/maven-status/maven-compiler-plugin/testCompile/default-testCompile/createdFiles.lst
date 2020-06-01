@@ -1,0 +1,5 @@
+org\apache\shardingsphere\transaction\base\seata\at\fixture\MockMessageHandler.class
+org\apache\shardingsphere\transaction\base\seata\at\fixture\MockSeataServer.class
+org\apache\shardingsphere\transaction\base\seata\at\SeataATShardingTransactionManagerTest.class
+org\apache\shardingsphere\transaction\base\seata\at\fixture\MockSeataServer$1.class
+org\apache\shardingsphere\transaction\base\seata\at\TransactionalSQLExecutionHookTest.class

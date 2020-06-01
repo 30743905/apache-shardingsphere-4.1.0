@@ -1,0 +1,7 @@
+org\apache\shardingsphere\sql\parser\sql\constant\QuoteCharacterTest.class
+org\apache\shardingsphere\sql\parser\sql\util\SQLUtilTest.class
+org\apache\shardingsphere\sql\parser\sql\statement\dml\InsertStatementTest.class
+org\apache\shardingsphere\sql\parser\sql\segment\dml\column\ColumnSegmentTest.class
+org\apache\shardingsphere\sql\parser\sql\constant\LogicalOperatorTest.class
+org\apache\shardingsphere\sql\parser\sql\segment\generic\table\SimpleTableSegmentTest.class
+org\apache\shardingsphere\sql\parser\sql\constant\ParenTest.class

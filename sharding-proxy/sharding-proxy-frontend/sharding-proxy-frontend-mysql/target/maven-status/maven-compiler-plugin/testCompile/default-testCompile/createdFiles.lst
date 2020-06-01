@@ -1,0 +1,7 @@
+org\apache\shardingsphere\shardingproxy\frontend\mysql\command\query\binary\execute\MySQLComStmtExecuteExecutorTest.class
+org\apache\shardingsphere\shardingproxy\frontend\mysql\MySQLErrPacketFactoryTest.class
+org\apache\shardingsphere\shardingproxy\frontend\mysql\MySQLFrontendEngineTest.class
+org\apache\shardingsphere\shardingproxy\frontend\mysql\auth\MySQLAuthenticationEngineTest.class
+org\apache\shardingsphere\shardingproxy\frontend\mysql\command\query\binary\reset\MySQLComStmtResetExecutorTest.class
+org\apache\shardingsphere\shardingproxy\frontend\mysql\command\query\text\query\MySQLComQueryPacketExecutorTest.class
+org\apache\shardingsphere\shardingproxy\frontend\mysql\auth\MySQLAuthenticationHandlerTest.class

@@ -1,0 +1,2 @@
+org\apache\shardingsphere\masterslave\route\engine\MasterSlaveRouteDecoratorTest.class
+org\apache\shardingsphere\masterslave\route\log\MasterSlaveSQLLoggerTest.class

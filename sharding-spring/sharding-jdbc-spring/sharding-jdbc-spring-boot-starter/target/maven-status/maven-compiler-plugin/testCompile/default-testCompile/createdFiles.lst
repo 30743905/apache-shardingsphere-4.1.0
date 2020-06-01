@@ -1,0 +1,12 @@
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootJNDITest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\fixture\TestEncryptor.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootShadowTest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootRawDataSourceTest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\fixture\TestJndiInitialContextFactory$1.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\fixture\TestJndiInitialContextFactory.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootEncryptTest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootMasterSlaveTest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootBroadcastTableTest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\fixture\TestJndiInitialContextFactory$JndiContext.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootShadowShardingTest.class
+org\apache\shardingsphere\shardingjdbc\spring\boot\type\SpringBootShardingTest.class

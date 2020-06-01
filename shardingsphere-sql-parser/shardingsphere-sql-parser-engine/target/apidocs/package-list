@@ -1,0 +1,7 @@
+org.apache.shardingsphere.sql.parser
+org.apache.shardingsphere.sql.parser.cache
+org.apache.shardingsphere.sql.parser.core
+org.apache.shardingsphere.sql.parser.core.parser
+org.apache.shardingsphere.sql.parser.core.visitor
+org.apache.shardingsphere.sql.parser.exception
+org.apache.shardingsphere.sql.parser.hook

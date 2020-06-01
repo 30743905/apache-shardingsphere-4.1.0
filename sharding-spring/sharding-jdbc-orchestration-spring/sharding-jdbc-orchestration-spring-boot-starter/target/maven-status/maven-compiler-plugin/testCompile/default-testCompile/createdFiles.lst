@@ -1,0 +1,9 @@
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\SpringBootRawDataSourceTest.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\OrchestrationSpringBootShardingTest.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\OrchestrationSpringBootMasterSlaveTest.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\OrchestrationSpringBootRegistryEncryptTest.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\OrchestrationSpringBootRegistryMasterSlaveTest.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\util\EmbedTestingServer.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\registry\TestCenterRepository.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\OrchestrationSpringBootRegistryShardingTest.class
+org\apache\shardingsphere\shardingjdbc\orchestration\spring\boot\type\OrchestrationSpringBootEncryptTest.class

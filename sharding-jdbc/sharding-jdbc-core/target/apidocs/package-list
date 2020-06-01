@@ -1,0 +1,16 @@
+org.apache.shardingsphere.shardingjdbc.api
+org.apache.shardingsphere.shardingjdbc.api.yaml
+org.apache.shardingsphere.shardingjdbc.executor
+org.apache.shardingsphere.shardingjdbc.executor.batch
+org.apache.shardingsphere.shardingjdbc.jdbc.adapter
+org.apache.shardingsphere.shardingjdbc.jdbc.adapter.executor
+org.apache.shardingsphere.shardingjdbc.jdbc.adapter.invocation
+org.apache.shardingsphere.shardingjdbc.jdbc.core.connection
+org.apache.shardingsphere.shardingjdbc.jdbc.core.constant
+org.apache.shardingsphere.shardingjdbc.jdbc.core.context
+org.apache.shardingsphere.shardingjdbc.jdbc.core.datasource
+org.apache.shardingsphere.shardingjdbc.jdbc.core.datasource.metadata
+org.apache.shardingsphere.shardingjdbc.jdbc.core.resultset
+org.apache.shardingsphere.shardingjdbc.jdbc.core.statement
+org.apache.shardingsphere.shardingjdbc.jdbc.core.statement.metadata
+org.apache.shardingsphere.shardingjdbc.jdbc.unsupported

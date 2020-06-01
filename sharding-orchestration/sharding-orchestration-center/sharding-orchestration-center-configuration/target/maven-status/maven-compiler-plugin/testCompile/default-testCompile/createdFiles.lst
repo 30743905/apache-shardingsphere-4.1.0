@@ -1,0 +1,4 @@
+org\apache\shardingsphere\orchestration\center\yaml\swapper\OrchestrationConfigurationYamlSwapperTest.class
+org\apache\shardingsphere\orchestration\center\yaml\config\YamlOrchestrationConfigurationTest.class
+org\apache\shardingsphere\orchestration\center\yaml\config\YamlCenterRepositoryConfigurationTest.class
+org\apache\shardingsphere\orchestration\center\yaml\swapper\CenterRepositoryConfigurationYamlSwapperTest.class

@@ -1,0 +1,6 @@
+org\apache\shardingsphere\opentracing\hook\OpenTracingParsingHookTest.class
+org\apache\shardingsphere\opentracing\fixture\FooTracer.class
+org\apache\shardingsphere\opentracing\hook\BaseOpenTracingHookTest.class
+org\apache\shardingsphere\opentracing\ShardingTracerTest.class
+org\apache\shardingsphere\opentracing\hook\OpenTracingRootInvokeHookTest.class
+org\apache\shardingsphere\opentracing\hook\OpenTracingSQLExecutionHookTest.class

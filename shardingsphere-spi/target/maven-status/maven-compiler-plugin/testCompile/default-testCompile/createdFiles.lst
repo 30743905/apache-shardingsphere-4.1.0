@@ -1,0 +1,5 @@
+org\apache\shardingsphere\spi\fixture\TypeBasedSPIFixture.class
+org\apache\shardingsphere\spi\TypeBasedSPIServiceLoaderTest.class
+org\apache\shardingsphere\spi\NewInstanceServiceLoaderTest.class
+org\apache\shardingsphere\spi\fixture\TypeBasedSPIFixtureServiceLoader.class
+org\apache\shardingsphere\spi\fixture\TypeBasedSPIFixtureImpl.class

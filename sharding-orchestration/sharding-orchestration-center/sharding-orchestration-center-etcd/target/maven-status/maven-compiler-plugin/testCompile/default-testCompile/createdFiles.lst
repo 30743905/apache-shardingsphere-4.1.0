@@ -1,0 +1,2 @@
+org\apache\shardingsphere\orchestration\center\instance\EtcdCenterRepositoryTest.class
+org\apache\shardingsphere\orchestration\center\instance\EtcdPropertiesTest.class

@@ -1,0 +1,5 @@
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-execute\src\test\java\org\apache\shardingsphere\sharding\execute\sql\execute\SQLExecuteCallbackTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-execute\src\test\java\org\apache\shardingsphere\sharding\execute\sql\prepare\SQLExecutePrepareTemplateTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-execute\src\test\java\org\apache\shardingsphere\sharding\execute\sql\execute\threadlocal\ExecutorExceptionHandlerTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-execute\src\test\java\org\apache\shardingsphere\sharding\execute\sql\execute\result\StreamQueryResultTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-execute\src\test\java\org\apache\shardingsphere\sharding\execute\sql\execute\result\MemoryQueryResultTest.java

@@ -1,0 +1,3 @@
+org\apache\shardingsphere\underlying\rewrite\impl\GroupedParameterBuilderTest.class
+org\apache\shardingsphere\underlying\rewrite\impl\StandardParameterBuilderTest.class
+org\apache\shardingsphere\underlying\rewrite\impl\DefaultSQLBuilderTest.class

@@ -1,0 +1,11 @@
+org\apache\shardingsphere\orchestration\core\registrycenter\RegistryCenterTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\fixture\FirstTestRegistryCenterRepository.class
+org\apache\shardingsphere\orchestration\core\registrycenter\listener\InstanceStateChangedListenerTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\schema\OrchestrationShardingSchemaGroupTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\util\FieldUtil.class
+org\apache\shardingsphere\orchestration\core\registrycenter\RegistryCenterNodeTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\fixture\SecondTestRegistryCenterRepository.class
+org\apache\shardingsphere\orchestration\core\registrycenter\listener\StateChangedListenerManagerTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\RegistryCenterRepositoryServiceLoaderTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\listener\DataSourceStateChangedListenerTest.class
+org\apache\shardingsphere\orchestration\core\registrycenter\schema\OrchestrationShardingSchemaTest.class

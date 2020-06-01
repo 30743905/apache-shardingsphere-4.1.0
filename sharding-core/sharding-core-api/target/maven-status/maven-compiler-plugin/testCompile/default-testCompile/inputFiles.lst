@@ -1,0 +1,8 @@
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\sharding\strategy\InlineShardingStrategyConfigurationTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\masterslave\MasterSlaveRuleConfigurationTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\sharding\KeyGeneratorConfigurationTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\sharding\strategy\HintShardingStrategyConfigurationTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\sharding\TableRuleConfigurationTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\hint\HintManagerTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\sharding\strategy\ComplexShardingStrategyConfigurationTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-core\sharding-core-api\src\test\java\org\apache\shardingsphere\api\config\sharding\strategy\StandardShardingStrategyConfigurationTest.java

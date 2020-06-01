@@ -1,0 +1,5 @@
+org.apache.shardingsphere.shardingscaling.mysql
+org.apache.shardingsphere.shardingscaling.mysql.binlog
+org.apache.shardingsphere.shardingscaling.mysql.binlog.event
+org.apache.shardingsphere.shardingscaling.mysql.client
+org.apache.shardingsphere.shardingscaling.mysql.client.netty

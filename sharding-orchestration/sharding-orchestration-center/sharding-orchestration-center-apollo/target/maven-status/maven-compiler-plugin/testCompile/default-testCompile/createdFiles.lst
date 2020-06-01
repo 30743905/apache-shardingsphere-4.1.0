@@ -1,0 +1,3 @@
+org\apache\shardingsphere\orchestration\center\instance\ApolloCenterRepositoryTest.class
+org\apache\shardingsphere\orchestration\center\instance\ApolloPropertiesTest.class
+org\apache\shardingsphere\orchestration\center\instance\wrapper\ApolloConfigWrapperTest.class

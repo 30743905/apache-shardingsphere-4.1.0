@@ -1,0 +1,6 @@
+org.apache.shardingsphere.sql.parser.autogen
+org.apache.shardingsphere.sql.parser.sql92
+org.apache.shardingsphere.sql.parser.sql92.lexer
+org.apache.shardingsphere.sql.parser.sql92.parser
+org.apache.shardingsphere.sql.parser.sql92.visitor
+org.apache.shardingsphere.sql.parser.sql92.visitor.impl

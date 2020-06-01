@@ -1,0 +1,4 @@
+org.apache.shardingsphere.encrypt.merge
+org.apache.shardingsphere.encrypt.merge.dal
+org.apache.shardingsphere.encrypt.merge.dal.impl
+org.apache.shardingsphere.encrypt.merge.dql

@@ -1,0 +1,8 @@
+org\apache\shardingsphere\orchestration\core\common\eventbus\ShardingOrchestrationEventBusTest.class
+org\apache\shardingsphere\orchestration\core\common\listener\PostShardingConfigCenterRepositoryEventListenerTest$2.class
+org\apache\shardingsphere\orchestration\core\common\listener\PostShardingRegistryCenterRepositoryEventListenerTest.class
+org\apache\shardingsphere\orchestration\core\common\listener\PostShardingRegistryCenterRepositoryEventListenerTest$1.class
+org\apache\shardingsphere\orchestration\core\common\listener\PostShardingConfigCenterRepositoryEventListenerTest$1.class
+org\apache\shardingsphere\orchestration\core\common\rule\OrchestrationMasterSlaveRuleTest.class
+org\apache\shardingsphere\orchestration\core\common\listener\PostShardingConfigCenterRepositoryEventListenerTest.class
+org\apache\shardingsphere\orchestration\core\common\rule\OrchestrationShardingRuleTest.class

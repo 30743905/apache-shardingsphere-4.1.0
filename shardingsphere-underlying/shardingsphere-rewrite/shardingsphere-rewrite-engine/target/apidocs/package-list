@@ -1,0 +1,14 @@
+org.apache.shardingsphere.underlying.rewrite
+org.apache.shardingsphere.underlying.rewrite.context
+org.apache.shardingsphere.underlying.rewrite.engine
+org.apache.shardingsphere.underlying.rewrite.parameter.builder
+org.apache.shardingsphere.underlying.rewrite.parameter.builder.impl
+org.apache.shardingsphere.underlying.rewrite.parameter.rewriter
+org.apache.shardingsphere.underlying.rewrite.sql
+org.apache.shardingsphere.underlying.rewrite.sql.impl
+org.apache.shardingsphere.underlying.rewrite.sql.token.generator
+org.apache.shardingsphere.underlying.rewrite.sql.token.generator.aware
+org.apache.shardingsphere.underlying.rewrite.sql.token.generator.builder
+org.apache.shardingsphere.underlying.rewrite.sql.token.generator.generic
+org.apache.shardingsphere.underlying.rewrite.sql.token.pojo
+org.apache.shardingsphere.underlying.rewrite.sql.token.pojo.generic

@@ -1,0 +1,8 @@
+org\apache\shardingsphere\orchestration\core\configcenter\listener\SchemaChangedListenerTest.class
+org\apache\shardingsphere\orchestration\core\configcenter\ConfigCenterNodeTest.class
+org\apache\shardingsphere\orchestration\core\configcenter\listener\AuthenticationChangedListenerTest.class
+org\apache\shardingsphere\orchestration\core\configcenter\listener\ConfigurationChangedListenerManagerTest.class
+org\apache\shardingsphere\orchestration\core\configcenter\fixture\FirstTestConfigCenterRepository.class
+org\apache\shardingsphere\orchestration\core\configcenter\listener\PropertiesChangedListenerTest.class
+org\apache\shardingsphere\orchestration\core\configcenter\ConfigCenterTest.class
+org\apache\shardingsphere\orchestration\core\configcenter\ConfigCenterRepositoryServiceLoaderTest.class

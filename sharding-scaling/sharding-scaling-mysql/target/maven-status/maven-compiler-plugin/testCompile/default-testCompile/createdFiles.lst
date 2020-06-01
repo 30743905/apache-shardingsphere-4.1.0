@@ -1,0 +1,10 @@
+org\apache\shardingsphere\shardingscaling\mysql\client\netty\MySQLCommandPacketDecoderTest.class
+org\apache\shardingsphere\shardingscaling\mysql\client\MySQLClientTest.class
+org\apache\shardingsphere\shardingscaling\mysql\BinlogPositionTest.class
+org\apache\shardingsphere\shardingscaling\mysql\client\MySQLPasswordEncryptorTest.class
+org\apache\shardingsphere\shardingscaling\mysql\client\netty\MySQLNegotiateHandlerTest.class
+org\apache\shardingsphere\shardingscaling\mysql\client\ServerVersionTest.class
+org\apache\shardingsphere\shardingscaling\mysql\MySQLLogPositionManagerTest.class
+org\apache\shardingsphere\shardingscaling\utils\ReflectionUtil.class
+org\apache\shardingsphere\shardingscaling\mysql\client\netty\MySQLBinlogEventPacketDecoderTest.class
+org\apache\shardingsphere\shardingscaling\mysql\binlog\BinlogContextTest.class

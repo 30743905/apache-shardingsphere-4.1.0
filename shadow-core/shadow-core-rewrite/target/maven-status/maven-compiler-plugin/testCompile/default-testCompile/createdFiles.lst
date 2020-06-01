@@ -1,0 +1,5 @@
+org\apache\shardingsphere\shadow\rewrite\judgement\impl\PreparedJudgementEngineTest.class
+org\apache\shardingsphere\shadow\rewrite\judgement\impl\SimpleJudgementEngineTest$2.class
+org\apache\shardingsphere\shadow\rewrite\condition\ShadowConditionEngineTest.class
+org\apache\shardingsphere\shadow\rewrite\judgement\impl\SimpleJudgementEngineTest.class
+org\apache\shardingsphere\shadow\rewrite\judgement\impl\SimpleJudgementEngineTest$1.class

@@ -1,0 +1,5 @@
+org\apache\shardingsphere\transaction\core\fixture\ShardingTransactionManagerFixture.class
+org\apache\shardingsphere\transaction\core\ResourceIDGeneratorTest.class
+org\apache\shardingsphere\transaction\core\TransactionTypeHolderTest.class
+org\apache\shardingsphere\transaction\ShardingTransactionManagerEngineTest.class
+org\apache\shardingsphere\transaction\core\fixture\OtherShardingTransactionManagerFixture.class

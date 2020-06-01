@@ -1,0 +1,4 @@
+org.apache.shardingsphere.underlying.rewrite.parameterized.engine
+org.apache.shardingsphere.underlying.rewrite.parameterized.engine.parameter
+org.apache.shardingsphere.underlying.rewrite.parameterized.entity
+org.apache.shardingsphere.underlying.rewrite.parameterized.loader

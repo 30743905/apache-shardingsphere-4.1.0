@@ -1,0 +1,11 @@
+org.apache.shardingsphere.underlying.merge
+org.apache.shardingsphere.underlying.merge.engine
+org.apache.shardingsphere.underlying.merge.engine.decorator
+org.apache.shardingsphere.underlying.merge.engine.decorator.impl
+org.apache.shardingsphere.underlying.merge.engine.merger
+org.apache.shardingsphere.underlying.merge.engine.merger.impl
+org.apache.shardingsphere.underlying.merge.result
+org.apache.shardingsphere.underlying.merge.result.impl.decorator
+org.apache.shardingsphere.underlying.merge.result.impl.memory
+org.apache.shardingsphere.underlying.merge.result.impl.stream
+org.apache.shardingsphere.underlying.merge.result.impl.transparent

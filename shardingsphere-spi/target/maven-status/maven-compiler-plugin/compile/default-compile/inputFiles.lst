@@ -1,0 +1,10 @@
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\TypeBasedSPI.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\database\type\DatabaseType.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\database\metadata\MemorizedDataSourceMetaData.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\order\OrderAware.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\database\type\DatabaseTypeAwareSPI.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\NewInstanceServiceLoader.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\TypeBasedSPIServiceLoader.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\database\type\BranchDatabaseType.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\order\OrderedRegistry.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\shardingsphere-spi\src\main\java\org\apache\shardingsphere\spi\database\metadata\DataSourceMetaData.java

@@ -1,0 +1,3 @@
+org\apache\shardingsphere\transaction\spring\ShardingTransactionTypeScannerTest.class
+org\apache\shardingsphere\transaction\spring\fixture\FixtureSpringConfiguration.class
+org\apache\shardingsphere\transaction\spring\fixture\MockService.class

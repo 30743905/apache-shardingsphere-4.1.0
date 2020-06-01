@@ -1,0 +1,6 @@
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-opentracing\src\test\java\org\apache\shardingsphere\opentracing\ShardingTracerTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-opentracing\src\test\java\org\apache\shardingsphere\opentracing\hook\OpenTracingRootInvokeHookTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-opentracing\src\test\java\org\apache\shardingsphere\opentracing\hook\BaseOpenTracingHookTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-opentracing\src\test\java\org\apache\shardingsphere\opentracing\hook\OpenTracingParsingHookTest.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-opentracing\src\test\java\org\apache\shardingsphere\opentracing\fixture\FooTracer.java
+D:\Material\source\sharding-sphere\apache-shardingsphere-4.1.0-src-release\sharding-opentracing\src\test\java\org\apache\shardingsphere\opentracing\hook\OpenTracingSQLExecutionHookTest.java
