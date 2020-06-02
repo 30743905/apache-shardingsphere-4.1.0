@@ -84,6 +84,9 @@ public final class SQLStatementContextFactory {
     @SuppressWarnings("unchecked")
     public static SQLStatementContext newInstance(final SchemaMetaData schemaMetaData, final String sql, final List<Object> parameters, final SQLStatement sqlStatement) {
         if (sqlStatement instanceof DMLStatement) {
+            /**
+             * 根据sqlStatement类型，解析出对应的SelectStatement、UpdateStatement、DeleteStatement、InsertStatement
+             */
             return getDMLStatementContext(schemaMetaData, sql, parameters, (DMLStatement) sqlStatement);
         }
         if (sqlStatement instanceof DDLStatement) {

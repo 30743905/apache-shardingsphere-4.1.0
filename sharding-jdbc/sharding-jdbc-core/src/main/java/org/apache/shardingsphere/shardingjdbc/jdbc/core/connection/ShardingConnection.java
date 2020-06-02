@@ -39,13 +39,14 @@ import java.util.Map;
  */
 @Getter
 public final class ShardingConnection extends AbstractConnectionAdapter {
-    
+
+    //数据源
     private final Map<String, DataSource> dataSourceMap;
-    
+    //运行上下文
     private final ShardingRuntimeContext runtimeContext;
-    
+    //事务类型
     private final TransactionType transactionType;
-    
+    //事务管理器
     private final ShardingTransactionManager shardingTransactionManager;
     
     public ShardingConnection(final Map<String, DataSource> dataSourceMap, final ShardingRuntimeContext runtimeContext, final TransactionType transactionType) {

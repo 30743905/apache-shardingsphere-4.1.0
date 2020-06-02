@@ -58,6 +58,11 @@ public final class SQLParserEngine {
         ParsingHook parsingHook = new SPIParsingHook();
         parsingHook.start(sql);
         try {
+            /**
+             * 根据sql解析成对应的SQLStatement，
+             * SQLStatement比较常见的是：DMLStatement、DDLStatement、DCLStatement、DALStatement
+             * 其中，DMLStatement常见的比如:InsertStatement、DeleteStatement、UpdateStatement、SelectStatement等等
+             */
             SQLStatement result = parse0(sql, useCache);
             parsingHook.finishSuccess(result);
             return result;

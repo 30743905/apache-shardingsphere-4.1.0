@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84e46aca-2a4c-4d12-a08c-da00a31645de" name="Default Changelist" comment="" />
+    <list default="true" id="84e46aca-2a4c-4d12-a08c-da00a31645de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/doc/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/target/classes/demo01/Demo01.class" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/target/classes/demo01/Demo01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractConnectionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractConnectionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/connection/ShardingConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/connection/ShardingConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/AbstractRuntimeContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/AbstractRuntimeContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/target/classes/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractConnectionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/target/classes/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractConnectionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/target/classes/org/apache/shardingsphere/shardingjdbc/jdbc/core/connection/ShardingConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/target/classes/org/apache/shardingsphere/shardingjdbc/jdbc/core/connection/ShardingConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/target/classes/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/AbstractRuntimeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/target/classes/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/AbstractRuntimeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/src/main/java/org/apache/shardingsphere/sql/parser/binder/SQLStatementContextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/src/main/java/org/apache/shardingsphere/sql/parser/binder/SQLStatementContextFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/target/classes/org/apache/shardingsphere/sql/parser/binder/SQLStatementContextFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/target/classes/org/apache/shardingsphere/sql/parser/binder/SQLStatementContextFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java/org/apache/shardingsphere/sql/parser/SQLParserEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java/org/apache/shardingsphere/sql/parser/SQLParserEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/target/classes/org/apache/shardingsphere/sql/parser/SQLParserEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/target/classes/org/apache/shardingsphere/sql/parser/SQLParserEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java/org/apache/shardingsphere/underlying/route/DataNodeRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java/org/apache/shardingsphere/underlying/route/DataNodeRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/target/classes/org/apache/shardingsphere/underlying/route/DataNodeRouter.class" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/target/classes/org/apache/shardingsphere/underlying/route/DataNodeRouter.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +38,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -31,7 +53,9 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1chsRcv3vNyNtA96qLtoteMjlL9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
@@ -106,6 +130,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Demo02.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sharding-jdbc-core-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="demo01" />
+      <option name="MAIN_CLASS_NAME" value="demo01.Demo02" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GuavaTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-jdbc-core" />
       <extension name="coverage">
@@ -151,6 +192,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Demo01.test01 (1)" />
+        <item itemvalue="JUnit.Demo02.test01" />
         <item itemvalue="JUnit.Demo01.test01" />
         <item itemvalue="JUnit.GuavaTest.test01" />
       </list>
@@ -169,12 +211,26 @@
       <workItem from="1590992155725" duration="467000" />
       <workItem from="1590992708404" duration="5815000" />
       <workItem from="1590998683204" duration="3152000" />
-      <workItem from="1591001846827" duration="5812000" />
+      <workItem from="1591001846827" duration="6521000" />
+      <workItem from="1591061934353" duration="14710000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -205,84 +261,54 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractDataSourceAdapter.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/datasource/ShardingDataSource.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/AbstractRuntimeContext.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-executor/src/main/java/org/apache/shardingsphere/underlying/executor/engine/ExecutorEngine.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/MultipleDataSourcesRuntimeContext.java</url>
           <line>58</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>66</line>
+          <line>58</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>72</line>
+          <line>64</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>73</line>
+          <line>65</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>74</line>
+          <line>66</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>75</line>
+          <line>67</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>76</line>
+          <line>68</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>77</line>
+          <line>69</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo01.java</url>
-          <line>78</line>
+          <line>70</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/context/AbstractRuntimeContext.java</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-pluggable/src/main/java/org/apache/shardingsphere/underlying/pluggble/prepare/BasePrepareEngine.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/executor/AbstractStatementExecutor.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shardingsphere-spi/src/main/java/org/apache/shardingsphere/spi/order/OrderedRegistry.java</url>
@@ -290,13 +316,8 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shardingsphere-spi/src/main/java/org/apache/shardingsphere/spi/NewInstanceServiceLoader.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java/org/apache/shardingsphere/underlying/route/DataNodeRouter.java</url>
-          <line>61</line>
+          <line>67</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -313,6 +334,136 @@
           <url>file://$PROJECT_DIR$/sharding-core/sharding-core-route/src/main/java/org/apache/shardingsphere/sharding/route/engine/condition/engine/WhereClauseShardingConditionEngine.java</url>
           <line>66</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractConnectionAdapter.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/adapter/AbstractConnectionAdapter.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-core/sharding-core-execute/src/main/java/org/apache/shardingsphere/sharding/execute/sql/prepare/SQLExecutePrepareTemplate.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/executor/PreparedStatementExecutor.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-core/sharding-core-execute/src/main/java/org/apache/shardingsphere/sharding/execute/sql/prepare/SQLExecutePrepareTemplate.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/executor/PreparedStatementExecutor.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/executor/PreparedStatementExecutor.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/statement/ShardingPreparedStatement.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/statement/ShardingPreparedStatement.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/statement/ShardingPreparedStatement.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core/src/main/java/org/apache/shardingsphere/shardingjdbc/jdbc/core/statement/ShardingPreparedStatement.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-pluggable/src/main/java/org/apache/shardingsphere/underlying/pluggble/prepare/BasePrepareEngine.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-pluggable/src/main/java/org/apache/shardingsphere/underlying/pluggble/prepare/BasePrepareEngine.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-core/sharding-core-route/src/main/java/org/apache/shardingsphere/sharding/route/engine/ShardingRouteDecorator.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-core/sharding-core-route/src/main/java/org/apache/shardingsphere/sharding/route/engine/ShardingRouteDecorator.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java/org/apache/shardingsphere/underlying/route/hook/SPIRoutingHook.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java/org/apache/shardingsphere/underlying/route/DataNodeRouter.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java/org/apache/shardingsphere/underlying/route/DataNodeRouter.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java/org/apache/shardingsphere/sql/parser/SQLParserEngine.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java/org/apache/shardingsphere/sql/parser/SQLParserEngine.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo02.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc-core-test/src/main/java/demo01/Demo02.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java/org/apache/shardingsphere/sql/parser/SQLParserEngine.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java/org/apache/shardingsphere/sql/parser/SQLParserEngine.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/src/main/java/org/apache/shardingsphere/sql/parser/binder/SQLStatementContextFactory.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/src/main/java/org/apache/shardingsphere/sql/parser/binder/segment/table/TablesContext.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

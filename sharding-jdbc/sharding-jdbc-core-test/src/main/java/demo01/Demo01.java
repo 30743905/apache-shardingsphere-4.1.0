@@ -48,20 +48,12 @@ public class Demo01 {
         dataSource2.setPassword("123456");
         dataSourceMap.put("ds1", dataSource2);
 
-        // 配置Order表规则
-        TableRuleConfiguration orderTableRuleConfig =
-                new TableRuleConfiguration("t_order","ds${0..1}.t_order_${0..1}");
 
-        // 配置分库 + 分表策略
-        orderTableRuleConfig.setDatabaseShardingStrategyConfig(
-                new InlineShardingStrategyConfiguration("user_id", "ds${user_id % 2}"));
-        orderTableRuleConfig.setTableShardingStrategyConfig(
-                new InlineShardingStrategyConfiguration("order_id", "t_order_${order_id % 2}"));
 
         // 配置分片规则
         ShardingRuleConfiguration shardingRuleConfig = new ShardingRuleConfiguration();
-        shardingRuleConfig.getTableRuleConfigs().add(orderTableRuleConfig);
-
+        shardingRuleConfig.getTableRuleConfigs().add(orderRule());
+        shardingRuleConfig.getTableRuleConfigs().add(orderItemRule());
 
         // 获取数据源对象
         DataSource dataSource = ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, new Properties());
@@ -85,5 +77,33 @@ public class Demo01 {
 
 
     }
+
+    private TableRuleConfiguration orderRule(){
+        // 配置Order表规则
+        TableRuleConfiguration orderTableRuleConfig =
+                new TableRuleConfiguration("t_order","ds${0..1}.t_order_${0..1}");
+
+        // 配置分库 + 分表策略
+        orderTableRuleConfig.setDatabaseShardingStrategyConfig(
+                new InlineShardingStrategyConfiguration("user_id", "ds${user_id % 2}"));
+        orderTableRuleConfig.setTableShardingStrategyConfig(
+                new InlineShardingStrategyConfiguration("order_id", "t_order_${order_id % 2}"));
+        return orderTableRuleConfig;
+    }
+
+    private TableRuleConfiguration orderItemRule(){
+        // 配置Order表规则
+        TableRuleConfiguration orderTableRuleConfig =
+                new TableRuleConfiguration("t_order_item","ds${0..1}.t_order_item_${0..1}");
+
+        // 配置分库 + 分表策略
+        orderTableRuleConfig.setDatabaseShardingStrategyConfig(
+                new InlineShardingStrategyConfiguration("user_id", "ds${user_id % 2}"));
+        orderTableRuleConfig.setTableShardingStrategyConfig(
+                new InlineShardingStrategyConfiguration("order_id", "t_order_item_${order_id % 2}"));
+        return orderTableRuleConfig;
+
+    }
+
 
 }

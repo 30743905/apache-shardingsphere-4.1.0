@@ -38,13 +38,14 @@ import java.util.Properties;
  */
 @Getter
 public abstract class AbstractRuntimeContext<T extends BaseRule> implements RuntimeContext<T> {
-    
+
+    //分库分表规则配置对象，获取表分片策略、通过逻辑表查找分片规则等
     private final T rule;
     
     private final ConfigurationProperties properties;
-    
+    //数据库类型
     private final DatabaseType databaseType;
-    
+    //多线程执行引擎，采用guava的ListeningExecutorService跟elasticsearch多线程框架来讲，比较单一
     private final ExecutorEngine executorEngine;
     
     private final SQLParserEngine sqlParserEngine;

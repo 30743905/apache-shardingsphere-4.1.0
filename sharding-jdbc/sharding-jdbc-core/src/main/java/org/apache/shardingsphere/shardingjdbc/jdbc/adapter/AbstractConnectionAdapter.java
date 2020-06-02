@@ -119,6 +119,7 @@ public abstract class AbstractConnectionAdapter extends AbstractUnsupportedOpera
     private List<Connection> createConnections(final String dataSourceName, final ConnectionMode connectionMode, final DataSource dataSource, final int connectionSize) throws SQLException {
         if (1 == connectionSize) {
             Connection connection = createConnection(dataSourceName, dataSource);
+            // 进行相关设置
             replayMethodsInvocation(connection);
             return Collections.singletonList(connection);
         }

@@ -47,7 +47,13 @@ public final class DataNodeRouter {
     private final ConfigurationProperties properties;
     
     private final SQLParserEngine parserEngine;
-    
+
+    /**
+     * ShardingRule -> ShardingRouteDecorator
+     * MasterSlaveRule -> MasterSlaveRouteDecorator
+     *
+     * RouteDecorator#getType()获取支持Rule类型
+     */
     private final Map<BaseRule, RouteDecorator> decorators = new LinkedHashMap<>();
     
     private SPIRoutingHook routingHook = new SPIRoutingHook();
