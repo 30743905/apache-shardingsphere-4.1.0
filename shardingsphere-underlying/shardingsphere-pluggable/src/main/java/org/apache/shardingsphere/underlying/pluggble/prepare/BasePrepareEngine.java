@@ -79,7 +79,9 @@ public abstract class BasePrepareEngine {
      * @return execution context
      */
     public ExecutionContext prepare(final String sql, final List<Object> parameters) {
+        //克隆一份参数列表集合
         List<Object> clonedParameters = cloneParameters(parameters);
+
         RouteContext routeContext = executeRoute(sql, clonedParameters);
         ExecutionContext result = new ExecutionContext(routeContext.getSqlStatementContext());
         result.getExecutionUnits().addAll(executeRewrite(sql, clonedParameters, routeContext));
@@ -92,10 +94,16 @@ public abstract class BasePrepareEngine {
     protected abstract List<Object> cloneParameters(List<Object> parameters);
     
     private RouteContext executeRoute(final String sql, final List<Object> clonedParameters) {
+        //根据Rule类型初始化对应的RouteDecorator: ShardingRouteDecorator or MasterSlaveRouteDecorator
         registerRouteDecorator();
         return route(router, sql, clonedParameters);
     }
-    
+
+    /**
+     * 根据配置Rule类型，将DataNodeRouter.decorators map中初始化RouteDecorator，key是Rule类型class，value及时RouteDecorator class
+     *      SharingRule -> ShardingRouteDecorator
+     *      MasterSlaveRule -> MasterSlaveRouteDecorator
+     */
     private void registerRouteDecorator() {
         for (Class<? extends RouteDecorator> each : OrderedRegistry.getRegisteredClasses(RouteDecorator.class)) {
             RouteDecorator routeDecorator = createRouteDecorator(each);

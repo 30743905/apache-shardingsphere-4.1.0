@@ -82,10 +82,17 @@ public final class WhereClauseShardingConditionEngine {
 //        }
         return result;
     }
-    
+
+    //核心点，获取条件，包括where条件和subquery条件
     private Collection<ShardingCondition> createShardingConditions(final SQLStatementContext sqlStatementContext, final Collection<AndPredicate> andPredicates, final List<Object> parameters) {
         Collection<ShardingCondition> result = new LinkedList<>();
         for (AndPredicate each : andPredicates) {
+
+            /**
+             * 从子查询条件中获取路由单元，即column-shardingValue数据结构
+             * key:Column，包含了tableName、columnName
+             * value：LinkedList<ListRouteValue>，ListRouteValue主要包含了Column对应的实参值
+             */
             Map<Column, Collection<RouteValue>> routeValueMap = createRouteValueMap(sqlStatementContext, each, parameters);
             if (routeValueMap.isEmpty()) {
                 return Collections.emptyList();
@@ -94,12 +101,26 @@ public final class WhereClauseShardingConditionEngine {
         }
         return result;
     }
-    
+
+    /**
+     * 从子查询条件中获取路由单元，即column-shardingValue数据结构
+     * @param sqlStatementContext
+     * @param andPredicate
+     * @param parameters
+     * @return
+     */
     private Map<Column, Collection<RouteValue>> createRouteValueMap(final SQLStatementContext sqlStatementContext, final AndPredicate andPredicate, final List<Object> parameters) {
         Map<Column, Collection<RouteValue>> result = new HashMap<>();
         for (PredicateSegment each : andPredicate.getPredicates()) {
+            //获取表名
             Optional<String> tableName = sqlStatementContext.getTablesContext().findTableName(each.getColumn(), schemaMetaData);
+            /**
+             * isShardingColumn(final String columnName, final String tableName):判断当前column是否是分库分表列，判断条件：
+             * databaseShardingStrategy.shardingColumn
+             * tableShardingStrategy.shardingColumn
+             */
             if (!tableName.isPresent() || !shardingRule.isShardingColumn(each.getColumn().getIdentifier().getValue(), tableName.get())) {
+                //非分库分表Column，直接跳过
                 continue;
             }
             Column column = new Column(each.getColumn().getIdentifier().getValue(), tableName.get());
@@ -112,6 +133,10 @@ public final class WhereClauseShardingConditionEngine {
             }
             result.get(column).add(routeValue.get());
         }
+        /**
+         * key:Column，包含了tableName、columnName
+         * value：LinkedList<ListRouteValue>，ListRouteValue主要包含了实参值
+         */
         return result;
     }
     

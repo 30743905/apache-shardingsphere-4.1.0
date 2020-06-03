@@ -33,6 +33,7 @@ public final class ConditionValue {
     private final Comparable value;
     
     public ConditionValue(final ExpressionSegment expressionSegment, final List<Object> parameters) {
+        //获取表达式值
         value = getValue(expressionSegment, parameters);
     }
     
@@ -47,6 +48,7 @@ public final class ConditionValue {
     }
     
     private Comparable getValue(final ParameterMarkerExpressionSegment expressionSegment, final List<Object> parameters) {
+        //parameterMarkerIndex指定参数索引，从0开始，根据它从parameters获取即可
         Object result = parameters.get(expressionSegment.getParameterMarkerIndex());
         Preconditions.checkArgument(result instanceof Comparable, "Sharding value must implements Comparable.");
         return (Comparable) result;

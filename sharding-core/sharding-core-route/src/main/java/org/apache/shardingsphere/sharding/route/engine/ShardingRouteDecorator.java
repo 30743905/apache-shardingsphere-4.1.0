@@ -83,7 +83,13 @@ public final class ShardingRouteDecorator implements RouteDecorator<ShardingRule
         }
         return new ShardingConditions(Collections.emptyList());
     }
-    
+
+    /**
+     * 返回true条件：查询语句，且带有子查询，且当前table配置了分库分表规则
+     * @param sqlStatementContext
+     * @param shardingRule
+     * @return
+     */
     private boolean isNeedMergeShardingValues(final SQLStatementContext sqlStatementContext, final ShardingRule shardingRule) {
         return sqlStatementContext instanceof SelectStatementContext && ((SelectStatementContext) sqlStatementContext).isContainsSubquery() 
                 && !shardingRule.getShardingLogicTableNames(sqlStatementContext.getTablesContext().getTableNames()).isEmpty();

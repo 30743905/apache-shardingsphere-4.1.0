@@ -24,6 +24,15 @@ import java.util.Collection;
 import java.util.Collections;
 
 public final class HintShardingAlgorithmFixture implements HintShardingAlgorithm<Integer> {
+
+    private String flag;
+
+    public HintShardingAlgorithmFixture(){
+    }
+
+    public HintShardingAlgorithmFixture(String flag){
+        this.flag = flag;
+    }
     
     @Override
     public Collection<String> doSharding(final Collection<String> availableTargetNames, final HintShardingValue<Integer> shardingValue) {

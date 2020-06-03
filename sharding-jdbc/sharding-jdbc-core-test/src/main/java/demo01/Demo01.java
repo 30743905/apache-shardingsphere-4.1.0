@@ -59,13 +59,14 @@ public class Demo01 {
         DataSource dataSource = ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, new Properties());
         //DataSource dataSource = YamlShardingDataSourceFactory.createDataSource(yamlFile);
 
-        String sql = "SELECT * FROM t_order o  WHERE o.user_id=? AND o.order_id=? ";
+        String sql = "SELECT * FROM t_order o  WHERE o.user_id=? AND o.order_id=? and o.status=? ";
         //String sql = "SELECT i.* FROM t_order o JOIN t_order_item i ON o.order_id=i.order_id WHERE o.user_id=? AND o.order_id=?";
         try (
                 Connection conn = dataSource.getConnection();
                 PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
             preparedStatement.setInt(1, 11);
             preparedStatement.setInt(2, 1100);
+            preparedStatement.setString(3, "init");
             try (ResultSet rs = preparedStatement.executeQuery()) {
                 while(rs.next()) {
                     System.out.println(rs.getInt(1));
