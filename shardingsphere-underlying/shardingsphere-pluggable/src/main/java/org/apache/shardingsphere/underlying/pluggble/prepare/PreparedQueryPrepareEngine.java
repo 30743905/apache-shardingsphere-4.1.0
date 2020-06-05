@@ -43,12 +43,14 @@ public final class PreparedQueryPrepareEngine extends BasePrepareEngine {
     public PreparedQueryPrepareEngine(final Collection<BaseRule> rules, final ConfigurationProperties properties, final ShardingSphereMetaData metaData, final SQLParserEngine sqlParserEngine) {
         super(rules, properties, metaData, sqlParserEngine);
     }
-    
+
+    //克隆一份参数列表
     @Override
     protected List<Object> cloneParameters(final List<Object> parameters) {
         return new ArrayList<>(parameters);
     }
-    
+
+    //对sql进行路由解析
     @Override
     protected RouteContext route(final DataNodeRouter dataNodeRouter, final String sql, final List<Object> parameters) {
         return dataNodeRouter.route(sql, parameters, true);

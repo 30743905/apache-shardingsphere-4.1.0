@@ -30,10 +30,13 @@ import java.sql.Statement;
 @RequiredArgsConstructor
 @Getter
 public final class StatementExecuteUnit {
-    
+
+    //执行单元
     private final ExecutionUnit executionUnit;
-    
+
+    //根据执行单元创建的具体Statement
     private final Statement statement;
-    
+
+    //数据库模式
     private final ConnectionMode connectionMode;
 }

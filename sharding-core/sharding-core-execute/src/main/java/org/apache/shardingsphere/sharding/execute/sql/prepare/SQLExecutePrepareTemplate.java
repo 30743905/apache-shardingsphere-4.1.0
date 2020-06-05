@@ -56,11 +56,20 @@ public final class SQLExecutePrepareTemplate {
     
     private Collection<InputGroup<StatementExecuteUnit>> getSynchronizedExecuteUnitGroups(
             final Collection<ExecutionUnit> executionUnits, final SQLExecutePrepareCallback callback) throws SQLException {
+        //getSQLUnitGroups()对执行的sql进行分组，Map.key:数据库名称，value：同一个数据下的所有SQLUnit列表
         Map<String, List<SQLUnit>> sqlUnitGroups = getSQLUnitGroups(executionUnits);
         Collection<InputGroup<StatementExecuteUnit>> result = new LinkedList<>();
         for (Entry<String, List<SQLUnit>> entry : sqlUnitGroups.entrySet()) {
             result.addAll(getSQLExecuteGroups(entry.getKey(), entry.getValue(), callback));
         }
+        /**
+         * 已数据库维度进行分组，每个库被封装成一个组：InputGroup
+         * InputGroup包装的是一个StatementExecuteUnit集合，即一个数据库上可能需要执行多条sql，每条sql被封装成一个StatementExecuteUnit对象
+         * StatementExecuteUnit包含三个元素：
+         *     executionUnit：执行单元
+         *     statement：根据执行单元创建的具体Statement
+         *     connectionMode：数据库模式
+         */
         return result;
     }
     
@@ -78,6 +87,11 @@ public final class SQLExecutePrepareTemplate {
     private List<InputGroup<StatementExecuteUnit>> getSQLExecuteGroups(final String dataSourceName,
                                                                        final List<SQLUnit> sqlUnits, final SQLExecutePrepareCallback callback) throws SQLException {
         List<InputGroup<StatementExecuteUnit>> result = new LinkedList<>();
+
+        //在maxConnectionSizePerQuery允许的范围内，当一个连接需要执行的请求数量大于1时，意味着当前的数据库连接无法持有相应的数据结果集，则必须采用内存归并；
+        //反之，当一个连接需要执行的请求数量等于1时，意味着当前的数据库连接可以持有相应的数据结果集，则可以采用流式归并
+
+        //计算所需要的分区大小
         int desiredPartitionSize = Math.max(0 == sqlUnits.size() % maxConnectionsSizePerQuery ? sqlUnits.size() / maxConnectionsSizePerQuery : sqlUnits.size() / maxConnectionsSizePerQuery + 1, 1);
         List<List<SQLUnit>> sqlUnitPartitions = Lists.partition(sqlUnits, desiredPartitionSize);
         ConnectionMode connectionMode = maxConnectionsSizePerQuery < sqlUnits.size() ? ConnectionMode.CONNECTION_STRICTLY : ConnectionMode.MEMORY_STRICTLY;

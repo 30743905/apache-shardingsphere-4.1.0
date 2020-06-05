@@ -5,6 +5,7 @@ import org.apache.shardingsphere.api.config.sharding.ShardingRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.TableRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.strategy.InlineShardingStrategyConfiguration;
 import org.apache.shardingsphere.shardingjdbc.api.ShardingDataSourceFactory;
+import org.apache.shardingsphere.underlying.common.config.properties.ConfigurationPropertyKey;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -34,7 +35,7 @@ public class Demo01 {
 
         // 配置第一个数据源
         BasicDataSource dataSource1 = new BasicDataSource();
-        dataSource1.setDriverClassName("com.mysql.jdbc.Driver");
+        //dataSource1.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource1.setUrl("jdbc:mysql://localhost:3306/ds0?serverTimezone=UTC");
         dataSource1.setUsername("root");
         dataSource1.setPassword("123456");
@@ -42,7 +43,7 @@ public class Demo01 {
 
         // 配置第二个数据源
         BasicDataSource dataSource2 = new BasicDataSource();
-        dataSource2.setDriverClassName("com.mysql.jdbc.Driver");
+        //dataSource2.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource2.setUrl("jdbc:mysql://localhost:3306/ds1?serverTimezone=UTC");
         dataSource2.setUsername("root");
         dataSource2.setPassword("123456");
@@ -56,17 +57,23 @@ public class Demo01 {
         shardingRuleConfig.getTableRuleConfigs().add(orderItemRule());
 
         // 获取数据源对象
-        DataSource dataSource = ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, new Properties());
+        Properties props = new Properties();
+        props.put(ConfigurationPropertyKey.SQL_SHOW.getKey(), true);
+
+
+        DataSource dataSource = ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, props);
         //DataSource dataSource = YamlShardingDataSourceFactory.createDataSource(yamlFile);
 
-        String sql = "SELECT * FROM t_order o  WHERE o.user_id=? AND o.order_id=? and o.status=? ";
+        String sql = "SELECT * FROM t_order o  WHERE (o.user_id=? or o.user_id=?) AND o.order_id=? and o.status=? ";
+        //String sql = "SELECT * FROM t_order o  WHERE o.user_id=? AND o.order_id=? and o.status=? ";
         //String sql = "SELECT i.* FROM t_order o JOIN t_order_item i ON o.order_id=i.order_id WHERE o.user_id=? AND o.order_id=?";
         try (
                 Connection conn = dataSource.getConnection();
                 PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
-            preparedStatement.setInt(1, 11);
-            preparedStatement.setInt(2, 1100);
-            preparedStatement.setString(3, "init");
+            preparedStatement.setInt(1, 10);
+            preparedStatement.setInt(2, 11);
+            preparedStatement.setInt(3, 1100);
+            preparedStatement.setString(4, "init");
             try (ResultSet rs = preparedStatement.executeQuery()) {
                 while(rs.next()) {
                     System.out.println(rs.getInt(1));

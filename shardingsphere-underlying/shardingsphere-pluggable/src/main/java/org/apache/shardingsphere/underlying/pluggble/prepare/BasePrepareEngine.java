@@ -81,9 +81,10 @@ public abstract class BasePrepareEngine {
     public ExecutionContext prepare(final String sql, final List<Object> parameters) {
         //克隆一份参数列表集合
         List<Object> clonedParameters = cloneParameters(parameters);
-
+        //对SQL进行路由解析
         RouteContext routeContext = executeRoute(sql, clonedParameters);
         ExecutionContext result = new ExecutionContext(routeContext.getSqlStatementContext());
+        //executeRewrite方法执行SQL改写
         result.getExecutionUnits().addAll(executeRewrite(sql, clonedParameters, routeContext));
         if (properties.<Boolean>getValue(ConfigurationPropertyKey.SQL_SHOW)) {
             SQLLogger.logSQL(sql, properties.<Boolean>getValue(ConfigurationPropertyKey.SQL_SIMPLE), result.getSqlStatementContext(), result.getExecutionUnits());
@@ -105,10 +106,13 @@ public abstract class BasePrepareEngine {
      *      MasterSlaveRule -> MasterSlaveRouteDecorator
      */
     private void registerRouteDecorator() {
+        //getRegisteredClasses(RouteDecorator.class)：从NewInstanceServiceLoader.SERVICE_MAP中查找RouteDecorator实现类
         for (Class<? extends RouteDecorator> each : OrderedRegistry.getRegisteredClasses(RouteDecorator.class)) {
+            //利用反射通过class创建实例
             RouteDecorator routeDecorator = createRouteDecorator(each);
             Class<?> ruleClass = (Class<?>) routeDecorator.getType();
             // FIXME rule.getClass().getSuperclass() == ruleClass for orchestration, should decouple extend between orchestration rule and sharding rule
+            //DataNodeRouter中Map<BaseRule, RouteDecorator> decorators赋值，根据BaseRule类型赋值相应支持的RouteDecorator实例
             rules.stream().filter(rule -> rule.getClass() == ruleClass || rule.getClass().getSuperclass() == ruleClass).collect(Collectors.toList())
                     .forEach(rule -> router.registerDecorator(rule, routeDecorator));
         }
@@ -156,7 +160,17 @@ public abstract class BasePrepareEngine {
     
     private Collection<ExecutionUnit> rewrite(final RouteContext routeContext, final SQLRewriteContext sqlRewriteContext) {
         Collection<ExecutionUnit> result = new LinkedHashSet<>();
+        /**
+         * new SQLRouteRewriteEngine().rewrite(sqlRewriteContext, routeContext.getRouteResult())返回重写处理结果，存在分库分表，可能对应多条sql，所以返回的是Map
+         *      key:routeUnit，每个routeUnit对应数据库中具体的物理表
+         *      SQLRewriteResult：包含sql和parameters，sql是真是执行的sql，已进行重写，parameters是执行sql对应的参数
+         */
         for (Entry<RouteUnit, SQLRewriteResult> entry : new SQLRouteRewriteEngine().rewrite(sqlRewriteContext, routeContext.getRouteResult()).entrySet()) {
+            /**
+             * 将重写后的sql包装成执行单元ExecutionUnit，每个RouteUnit对应一个ExecutionUnit，包含两个元素：
+             * ExecutionUnit.dataSourceName:对应的库名称，ds0、ds1等
+             * ExecutionUnit.SQLUnit:sql单元，包含真正执行的sql已经parameters列表
+             */
             result.add(new ExecutionUnit(entry.getKey().getDataSourceMapper().getActualName(), new SQLUnit(entry.getValue().getSql(), entry.getValue().getParameters())));
         }
         return result;

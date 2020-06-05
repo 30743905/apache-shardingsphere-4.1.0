@@ -61,7 +61,9 @@ public final class PreparedStatementExecutor extends AbstractStatementExecutor {
      */
     public void init(final ExecutionContext executionContext) throws SQLException {
         setSqlStatementContext(executionContext.getSqlStatementContext());
+        //创建出Collection<InputGroup<StatementExecuteUnit>>，每个数据库会被封装成一个InputGroup，内部包含一个StatementExecuteUnit，包含在该库上要执行的所有sql
         getInputGroups().addAll(obtainExecuteGroups(executionContext.getExecutionUnits()));
+        //缓存statement、parameter
         cacheStatements();
     }
     

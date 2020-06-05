@@ -49,8 +49,13 @@ public final class DataNodeRouter {
     private final SQLParserEngine parserEngine;
 
     /**
-     * ShardingRule -> ShardingRouteDecorator
-     * MasterSlaveRule -> MasterSlaveRouteDecorator
+     * key：BaseRule类型，比如：ShardingRule和MasterSlaveRule，value是支持该种rule的RouteDecorator
+     *      ShardingRule -> ShardingRouteDecorator
+     *      MasterSlaveRule -> MasterSlaveRouteDecorator
+     *
+     * 支持条件：
+     *      1、rule的class和routeDecorator.getType()一致；
+     *      2、rule的class的父类和routeDecorator.getType()一致；(修复bug)
      *
      * RouteDecorator#getType()获取支持Rule类型
      */

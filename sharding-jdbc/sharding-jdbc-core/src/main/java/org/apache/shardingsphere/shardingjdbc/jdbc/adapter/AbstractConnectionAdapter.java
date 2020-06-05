@@ -117,15 +117,18 @@ public abstract class AbstractConnectionAdapter extends AbstractUnsupportedOpera
     
     @SuppressWarnings("SynchronizationOnLocalVariableOrMethodParameter")
     private List<Connection> createConnections(final String dataSourceName, final ConnectionMode connectionMode, final DataSource dataSource, final int connectionSize) throws SQLException {
+        //为1时不存在并发获取连接情况，直接返回单个连接
         if (1 == connectionSize) {
             Connection connection = createConnection(dataSourceName, dataSource);
             // 进行相关设置
             replayMethodsInvocation(connection);
             return Collections.singletonList(connection);
         }
+        //不处理并发
         if (ConnectionMode.CONNECTION_STRICTLY == connectionMode) {
             return createConnections(dataSourceName, dataSource, connectionSize);
         }
+        //并发
         synchronized (dataSource) {
             return createConnections(dataSourceName, dataSource, connectionSize);
         }

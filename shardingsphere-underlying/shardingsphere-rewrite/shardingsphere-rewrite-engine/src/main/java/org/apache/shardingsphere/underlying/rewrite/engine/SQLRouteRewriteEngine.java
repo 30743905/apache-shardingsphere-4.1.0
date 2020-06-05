@@ -45,9 +45,16 @@ public final class SQLRouteRewriteEngine {
      * @return SQL map of route unit and rewrite result
      */
     public Map<RouteUnit, SQLRewriteResult> rewrite(final SQLRewriteContext sqlRewriteContext, final RouteResult routeResult) {
+        /**
+         * key:routeUnit，每个routeUnit对应数据库中具体的物理表
+         * SQLRewriteResult：包含sql和parameters，sql是真是执行的sql，已进行重写，parameters是执行sql对应的参数
+         */
         Map<RouteUnit, SQLRewriteResult> result = new LinkedHashMap<>(routeResult.getRouteUnits().size(), 1);
         for (RouteUnit each : routeResult.getRouteUnits()) {
-            result.put(each, new SQLRewriteResult(new RouteSQLBuilder(sqlRewriteContext, each).toSQL(), getParameters(sqlRewriteContext.getParameterBuilder(), routeResult, each)));
+            result.put(each, new SQLRewriteResult(
+                    new RouteSQLBuilder(sqlRewriteContext, each).toSQL(),
+                    getParameters(sqlRewriteContext.getParameterBuilder(), routeResult, each)
+            ));
         }
         return result;
     }

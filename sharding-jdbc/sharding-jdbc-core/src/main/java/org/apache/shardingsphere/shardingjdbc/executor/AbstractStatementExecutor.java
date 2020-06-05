@@ -126,6 +126,7 @@ public abstract class AbstractStatementExecutor {
      */
     @SuppressWarnings("unchecked")
     protected final <T> List<T> executeCallback(final SQLExecuteCallback<T> executeCallback) throws SQLException {
+        //获取执行结果集合，结果类型分为两种类型：StreamQueryResult(包装ResultSet，还没有提取数据)、MemoryQueryResult(已将ResultSet中的数据提取出来了)，根据ConnectionMode内存模型不同返回不同结果类型
         List<T> result = sqlExecuteTemplate.execute((Collection) inputGroups, executeCallback);
         refreshMetaDataIfNeeded(connection.getRuntimeContext(), sqlStatementContext);
         return result;

@@ -51,6 +51,10 @@ import java.util.Optional;
  * Sharding route decorator.
  */
 public final class ShardingRouteDecorator implements RouteDecorator<ShardingRule> {
+
+    public ShardingRouteDecorator(){
+        System.out.println("************>>>>>>>>>>>++++++++++++++++");
+    }
     
     @SuppressWarnings("unchecked")
     @Override

@@ -112,12 +112,17 @@ public final class ShardingPreparedStatement extends AbstractShardingPreparedSta
     public ResultSet executeQuery() throws SQLException {
         ResultSet result;
         try {
+            /**
+             * 1.清理上次执行的缓存内容，比如对同一个preparedStatement对象执行两次executeQuery()，
+             * 第二次进来就需要清理掉之前执行的缓存数据，如清理statements
+             * 不同preparedStatement对象之间没有影响
+             */
             clearPrevious();
             prepare();
             initPreparedStatementExecutor();
             MergedResult mergedResult = mergeQuery(preparedStatementExecutor.executeQuery());
             result = new ShardingResultSet(preparedStatementExecutor.getResultSets(), mergedResult, this, executionContext);
-        } finally {
+        }finally {
             clearBatch();
         }
         currentResultSet = result;
@@ -181,6 +186,7 @@ public final class ShardingPreparedStatement extends AbstractShardingPreparedSta
     
     private void prepare() {
         executionContext = prepareEngine.prepare(sql, getParameters());
+        System.out.println("============");
         findGeneratedKey().ifPresent(generatedKey -> generatedValues.add(generatedKey.getGeneratedValues().getLast()));
     }
     
@@ -209,6 +215,7 @@ public final class ShardingPreparedStatement extends AbstractShardingPreparedSta
     
     private void initPreparedStatementExecutor() throws SQLException {
         preparedStatementExecutor.init(executionContext);
+        //给sql中？占位符赋值
         setParametersForStatements();
         replayMethodForStatements();
     }

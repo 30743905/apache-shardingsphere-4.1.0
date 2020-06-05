@@ -33,7 +33,13 @@ import java.util.ServiceLoader;
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class NewInstanceServiceLoader {
-    
+
+    /**
+     * ShardingKeyGenerator:SnowflakeShardingKeyGenerator、UUIDShardingKeyGenerator
+     * RouteDecorator:ShardingRouteDecorator、MasterSlaveRouteDecorator
+     * SQLRewriteContextDecorator:ShardingSQLRewriteContextDecorator、EncryptSQLRewriteContextDecorator
+     * ResultProcessEngine:ShardingResultMergerEngine、EncryptResultDecoratorEngine
+     */
     private static final Map<Class, Collection<Class<?>>> SERVICE_MAP = new HashMap<>();
     
     /**
