@@ -70,6 +70,11 @@ public final class WhereClauseShardingConditionEngine {
         List<ShardingCondition> result = new ArrayList<>();
         Optional<WhereSegment> whereSegment = ((WhereAvailable) sqlStatementContext).getWhere();
         if (whereSegment.isPresent()) {
+            /**
+             * WhereSegment 是对sql中的where子句解析结果，主要包括startIndex(where子句起始位置)、stopIndex(where子句终止位置)和andPredicates集合
+             * andPredicates是个AndPredicate对象的list集合，每个AndPredicate代码where子句的一种场景，AndPredicate主要包含PredicateSegment集合，
+             * PredicateSegment代表一个限制条件，又包含startIndex、stopIndex、column、rightValue
+             */
             result.addAll(createShardingConditions(sqlStatementContext, whereSegment.get().getAndPredicates(), parameters));
         }
         // FIXME process subquery
@@ -84,6 +89,17 @@ public final class WhereClauseShardingConditionEngine {
     }
 
     //核心点，获取条件，包括where条件和subquery条件
+
+    /**
+     * 每个AndPredicate都会创建一个ShardingCondition，ShardingCondition主要包含一组RouteValue集合，
+     * 每个RouteValue封装where子句中存在的列，且是分片规则使用到的列，RouteValue分为：ListRouteValue、RangeRouteValue和AlwaysFalseRouteValue
+     *
+     *
+     * @param sqlStatementContext
+     * @param andPredicates
+     * @param parameters
+     * @return
+     */
     private Collection<ShardingCondition> createShardingConditions(final SQLStatementContext sqlStatementContext, final Collection<AndPredicate> andPredicates, final List<Object> parameters) {
         Collection<ShardingCondition> result = new LinkedList<>();
         for (AndPredicate each : andPredicates) {

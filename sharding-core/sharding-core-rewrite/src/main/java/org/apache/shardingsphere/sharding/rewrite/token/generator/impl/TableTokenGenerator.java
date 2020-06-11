@@ -32,6 +32,7 @@ import java.util.LinkedList;
 
 /**
  * Table token generator.
+ * 修改tableName的token生成器
  */
 @Setter
 public final class TableTokenGenerator implements CollectionSQLTokenGenerator, ShardingRuleAware {

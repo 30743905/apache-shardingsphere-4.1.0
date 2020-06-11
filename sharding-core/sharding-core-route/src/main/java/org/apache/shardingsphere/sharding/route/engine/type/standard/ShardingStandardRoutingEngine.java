@@ -71,6 +71,10 @@ public final class ShardingStandardRoutingEngine implements ShardingRouteEngine 
         if (isDMLForModify(sqlStatementContext) && 1 != ((TableAvailable) sqlStatementContext).getAllTables().size()) {
             throw new ShardingSphereException("Cannot support Multiple-Table for '%s'.", sqlStatementContext.getSqlStatement());
         }
+        /**
+         * getDataNodes()进行分库分表，返回的是DataNode集合，每个DataNode包含数据库名称和表名称，代码的就是数据库中具体的一张物理表
+         * generateRouteResult()将分库分表返回的DataNode集合包装成RouteResult
+         */
         return generateRouteResult(getDataNodes(shardingRule, shardingRule.getTableRule(logicTableName)));
     }
     
@@ -187,7 +191,20 @@ public final class ShardingStandardRoutingEngine implements ShardingRouteEngine 
         }
         return result;
     }
-    
+
+    /**
+     * 分库分表
+     *
+     * routeDataSources()方法进行分库，返回分库列表
+     * routeTables()方法在分库的基础上进行分表，返回DataNode集合
+     * DataNode主要包含两个元素dataSourceName和tableName，每个DataNode代表具体数据库上的一张物理表
+     *
+     * @param shardingRule
+     * @param tableRule
+     * @param databaseShardingValues
+     * @param tableShardingValues
+     * @return
+     */
     private Collection<DataNode> route0(final ShardingRule shardingRule, final TableRule tableRule, final List<RouteValue> databaseShardingValues, final List<RouteValue> tableShardingValues) {
         Collection<String> routedDataSources = routeDataSources(shardingRule, tableRule, databaseShardingValues);
         Collection<DataNode> result = new LinkedList<>();
@@ -201,8 +218,14 @@ public final class ShardingStandardRoutingEngine implements ShardingRouteEngine 
         if (databaseShardingValues.isEmpty()) {
             return tableRule.getActualDatasourceNames();
         }
+        /**
+         * 找到表上配置的分库策略DatabaseShardingStrategy，然后调用doSharding()方法进行分片
+         * 传入参数：表上配置的库名称列表、where子句中过滤出来的所有分库相关列对应的RouteValue集合
+         */
         Collection<String> result = new LinkedHashSet<>(shardingRule.getDatabaseShardingStrategy(tableRule).doSharding(tableRule.getActualDatasourceNames(), databaseShardingValues, this.properties));
+        //校验分库结果集不为空
         Preconditions.checkState(!result.isEmpty(), "no database route info");
+        //校验该表分库都在配置的库列表中
         Preconditions.checkState(tableRule.getActualDatasourceNames().containsAll(result), 
                 "Some routed data sources do not belong to configured data sources. routed data sources: `%s`, configured data sources: `%s`", result, tableRule.getActualDatasourceNames());
         return result;

@@ -61,6 +61,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.bytebuddy:byte-buddy-agent:1.6.11" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.objenesis:objenesis:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.mockito:mockito-inline:2.7.21" level="project" />
+    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.4.5" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.7" level="project" />

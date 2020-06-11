@@ -69,30 +69,39 @@ public final class ShardingRouteEngineFactory {
                                                   final ShardingConditions shardingConditions, final ConfigurationProperties properties) {
         SQLStatement sqlStatement = sqlStatementContext.getSqlStatement();
         Collection<String> tableNames = sqlStatementContext.getTablesContext().getTableNames();
+        //全库路由
         if (sqlStatement instanceof TCLStatement) {
             return new ShardingDatabaseBroadcastRoutingEngine();
         }
+        //全库表路由
         if (sqlStatement instanceof DDLStatement) {
             return new ShardingTableBroadcastRoutingEngine(metaData.getSchema(), sqlStatementContext);
         }
+        //阻断路由
         if (sqlStatement instanceof DALStatement) {
             return getDALRoutingEngine(shardingRule, sqlStatement, tableNames);
         }
+        //全实例路由
         if (sqlStatement instanceof DCLStatement) {
             return getDCLRoutingEngine(sqlStatementContext, metaData);
         }
+        //默认库路由
         if (shardingRule.isAllInDefaultDataSource(tableNames)) {
             return new ShardingDefaultDatabaseRoutingEngine(tableNames);
         }
+        //全库路由
         if (shardingRule.isAllBroadcastTables(tableNames)) {
             return sqlStatement instanceof SelectStatement ? new ShardingUnicastRoutingEngine(tableNames) : new ShardingDatabaseBroadcastRoutingEngine();
         }
+        //默认库路由
         if (sqlStatementContext.getSqlStatement() instanceof DMLStatement && tableNames.isEmpty() && shardingRule.hasDefaultDataSourceName()) {
             return new ShardingDefaultDatabaseRoutingEngine(tableNames);
         }
+        //单播路由
         if (sqlStatementContext.getSqlStatement() instanceof DMLStatement && shardingConditions.isAlwaysFalse() || tableNames.isEmpty() || !shardingRule.tableRuleExists(tableNames)) {
             return new ShardingUnicastRoutingEngine(tableNames);
         }
+        //分片路由
         return getShardingRoutingEngine(shardingRule, sqlStatementContext, shardingConditions, tableNames, properties);
     }
     
@@ -127,11 +136,22 @@ public final class ShardingRouteEngineFactory {
     
     private static ShardingRouteEngine getShardingRoutingEngine(final ShardingRule shardingRule, final SQLStatementContext sqlStatementContext,
                                                                 final ShardingConditions shardingConditions, final Collection<String> tableNames, final ConfigurationProperties properties) {
+        /**
+         * 根据解析出来逻辑表获取分片表，如:SELECT i.* FROM t_order o, t_order_item i WHERE o.order_id = i.order_id and o.order_id = ?
+         * 则shardingTableNames为t_order，t_order_item
+         */
         Collection<String> shardingTableNames = shardingRule.getShardingLogicTableNames(tableNames);
+        /**
+         * 满足以下两个条件走标准路由，否则走复合路由
+         *      1、是否只有一张分片表
+         *      2、绑定的逻辑表（配置绑定表）是否包含所有分片表
+         */
         if (1 == shardingTableNames.size() || shardingRule.isAllBindingTables(shardingTableNames)) {
+            //标准路由，获取第一张表路由即可，参考官网案例说明
             return new ShardingStandardRoutingEngine(shardingTableNames.iterator().next(), sqlStatementContext, shardingConditions, properties);
         }
         // TODO config for cartesian set
+        //复合路由
         return new ShardingComplexRoutingEngine(tableNames, sqlStatementContext, shardingConditions, properties);
     }
 }

@@ -36,18 +36,39 @@ public final class RemoveTokenGenerator implements CollectionSQLTokenGenerator {
     
     @Override
     public boolean isGenerateSQLToken(final SQLStatementContext sqlStatementContext) {
+        /**
+         * show tables会被解析成ShowTablesStatement，如果show tables带有schema信息，会被移除掉，
+         * 比如：show tables from ds1会被改写成show tables
+         */
         if (sqlStatementContext.getSqlStatement() instanceof ShowTablesStatement) {
             return ((ShowTablesStatement) sqlStatementContext.getSqlStatement()).getFromSchema().isPresent();
         }
+        /**
+         * 语法:SHOW TABLE STATUS [FROM db_name] [LIKE 'pattern']
+         * 参数：[FROM db_name]  可选，表示查询哪个数据库下面的表信息。
+         * 　　　[LIKE 'pattern'] 可选，表示查询哪些具体的表名。
+         *
+         * 比如：show table status from ds1 like 't_order_0';
+         */
         if (sqlStatementContext.getSqlStatement() instanceof ShowTableStatusStatement) {
             return ((ShowTableStatusStatement) sqlStatementContext.getSqlStatement()).getFromSchema().isPresent();
         }
+
+        /**
+         * SHOW COLUMNS FROM tbl_name [FROM db_name]︰列出表的列信息
+         * 或SHOW COLUMNS FROM [db_name.]tbl_name
+         */
         if (sqlStatementContext.getSqlStatement() instanceof ShowColumnsStatement) {
             return ((ShowColumnsStatement) sqlStatementContext.getSqlStatement()).getFromSchema().isPresent();
         }
         return false;
     }
-    
+
+    /**
+     * 将需要移除的部分生成RemoveToken，后续sql改写的时候会将RemoveToken起始和终止中间部分内容替换成RemoveToken.toString()，toString()返回空字符串，所以就实现移除效果
+     * @param sqlStatementContext SQL statement context
+     * @return
+     */
     @Override
     public Collection<RemoveToken> generateSQLTokens(final SQLStatementContext sqlStatementContext) {
         if (sqlStatementContext.getSqlStatement() instanceof ShowTablesStatement) {

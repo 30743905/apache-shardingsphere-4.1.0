@@ -52,37 +52,52 @@ import java.util.Optional;
  */
 public final class ShardingRouteDecorator implements RouteDecorator<ShardingRule> {
 
-    public ShardingRouteDecorator(){
-        System.out.println("************>>>>>>>>>>>++++++++++++++++");
-    }
-    
+
     @SuppressWarnings("unchecked")
     @Override
     public RouteContext decorate(final RouteContext routeContext, final ShardingSphereMetaData metaData, final ShardingRule shardingRule, final ConfigurationProperties properties) {
         SQLStatementContext sqlStatementContext = routeContext.getSqlStatementContext();
         List<Object> parameters = routeContext.getParameters();
+
+        //InsertStatement和UpdateStatement会存在validator
         ShardingStatementValidatorFactory.newInstance(
                 sqlStatementContext.getSqlStatement()).ifPresent(validator -> validator.validate(shardingRule, sqlStatementContext.getSqlStatement(), parameters));
+
+
+
+        /**
+         * 创建ShardingConditions，包含一组ShardingCondition，每个ShardingCondition对应一个AndPredicate，
+         * 每个AndPredicate又对应一组PredicateSegment，每个PredicateSegment对应一个column和rightValue，即每个PredicateSegment对应where子句中的一个限制列
+         */
         ShardingConditions shardingConditions = getShardingConditions(parameters, sqlStatementContext, metaData.getSchema(), shardingRule);
+        //是否需要合并分片数据，查询且带有子查询，且查询的表是分片表，才返回true
         boolean needMergeShardingValues = isNeedMergeShardingValues(sqlStatementContext, shardingRule);
         if (sqlStatementContext.getSqlStatement() instanceof DMLStatement && needMergeShardingValues) {
             checkSubqueryShardingValues(sqlStatementContext, shardingRule, shardingConditions);
             mergeShardingConditions(shardingConditions);
         }
+        //创建SQL路由引擎
         ShardingRouteEngine shardingRouteEngine = ShardingRouteEngineFactory.newInstance(shardingRule, metaData, sqlStatementContext, shardingConditions, properties);
+        //SQL路由引擎进行路由解析
         RouteResult routeResult = shardingRouteEngine.route(shardingRule);
         if (needMergeShardingValues) {
             Preconditions.checkState(1 == routeResult.getRouteUnits().size(), "Must have one sharding with subquery.");
         }
+        //返回一个已经完成分库分表的RouteContext对象，注意：这里是新创建的
         return new RouteContext(sqlStatementContext, parameters, routeResult);
     }
     
     private ShardingConditions getShardingConditions(final List<Object> parameters, 
                                                      final SQLStatementContext sqlStatementContext, final SchemaMetaData schemaMetaData, final ShardingRule shardingRule) {
+        /**
+         * DMLStatement对应增、删、改、查 sql语句
+         */
         if (sqlStatementContext.getSqlStatement() instanceof DMLStatement) {
             if (sqlStatementContext instanceof InsertStatementContext) {
+                // 增 没有where子句，不能根据where子句进行分片
                 return new ShardingConditions(new InsertClauseShardingConditionEngine(shardingRule).createShardingConditions((InsertStatementContext) sqlStatementContext, parameters));
             }
+            //删、改、查 sql语句是根据where子句进行分片
             return new ShardingConditions(new WhereClauseShardingConditionEngine(shardingRule, schemaMetaData).createShardingConditions(sqlStatementContext, parameters));
         }
         return new ShardingConditions(Collections.emptyList());

@@ -69,6 +69,7 @@ public final class SQLTokenGenerators {
     public List<SQLToken> generateSQLTokens(final SQLStatementContext sqlStatementContext, final List<Object> parameters, final SchemaMetaData schemaMetaData) {
         List<SQLToken> result = new LinkedList<>();
         for (SQLTokenGenerator each : sqlTokenGenerators) {
+            //执行前给SQLTokenGenerator执行初始化工作：ParametersAware、SchemaMetaDataAware、PreviousSQLTokensAware
             setUpSQLTokenGenerator(each, parameters, schemaMetaData, result);
             if (!each.isGenerateSQLToken(sqlStatementContext)) {
                 continue;

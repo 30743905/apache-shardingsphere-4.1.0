@@ -44,7 +44,9 @@ public abstract class AbstractSQLBuilder implements SQLBuilder {
         StringBuilder result = new StringBuilder();
         result.append(context.getSql().substring(0, context.getSqlTokens().get(0).getStartIndex()));
         for (SQLToken each : context.getSqlTokens()) {
+            //重写token
             result.append(getSQLTokenText(each));
+            //当前token和下一个token之间文本
             result.append(getConjunctionText(each));
         }
         return result.toString();

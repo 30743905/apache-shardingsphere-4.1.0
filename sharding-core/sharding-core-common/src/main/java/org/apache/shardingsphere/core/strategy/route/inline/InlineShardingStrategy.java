@@ -55,15 +55,23 @@ public final class InlineShardingStrategy implements ShardingStrategy {
     
     @Override
     public Collection<String> doSharding(final Collection<String> availableTargetNames, final Collection<RouteValue> shardingValues, final ConfigurationProperties properties) {
+        //如果有多个RouteValue，这里只取第一个，因为行内分片测试只能是单列
         RouteValue shardingValue = shardingValues.iterator().next();
+        /**
+         * 如何在inline分表策略时，允许执行范围查询操作（BETWEEN AND、>、<、>=、<=）？
+         *      1、需要使用4.1.0以上版本。
+         *      2、将配置项allow.range.query.with.inline.sharding设置为true即可（默认为false）。
+         *      3、需要注意的是，此时所有的范围查询将会使用广播的方式查询每一个分表。
+         */
         if (properties.<Boolean>getValue(ConfigurationPropertyKey.ALLOW_RANGE_QUERY_WITH_INLINE_SHARDING) && shardingValue instanceof RangeRouteValue) {
             return availableTargetNames;
         }
+        //检查shardingValue必须是ListRouteValue，否则抛出异常
         Preconditions.checkState(shardingValue instanceof ListRouteValue, "Inline strategy cannot support this type sharding:" + shardingValue.toString());
         Collection<String> shardingResult = doSharding((ListRouteValue) shardingValue);
         Collection<String> result = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
         for (String each : shardingResult) {
-            if (availableTargetNames.contains(each)) {
+            if (availableTargetNames.contains(each)) {//再校验下
                 result.add(each);
             }
         }
